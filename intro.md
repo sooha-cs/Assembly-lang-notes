@@ -57,3 +57,20 @@ Register names differ by architecture:
 | x86-64 | rax, rbx, rcx...	| mov rax, 5 |
 | ARM | x0, x1, x2...  | mov x0, #5 |
 | RISC-V | a0, a1, a2... | li a0, 5 |
+
+### Common data types
+Data type sizes vary based on architecture.   
+
+1. Bit is one binary digit. Can be 0 or 1.    
+2. Nibble is 4 bits.    
+3. Byte is 8 bits.    
+4. Word is 2 bytes.     
+5. Double Word (DWORD) is 4 bytes. Twice the size of a word.    
+6. Quad Word (QWORD) is 8 bytes. Four times the size of a word.
+
+ Signed numbers can be positive or negative.   
+ Unsigned numbers can only be positive.     
+
+      
+ *The names come from how they work.    
+ Signed numbers need a sign bit to distinguish whether or not they're negative, similar to how we use the + and - signs. 🤔*
