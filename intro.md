@@ -74,3 +74,22 @@ Data type sizes vary based on architecture.
       
  *The names come from how they work.    
  Signed numbers need a sign bit to distinguish whether or not they're negative, similar to how we use the + and - signs. 🤔*
+
+
+ ## About Assembly
+ The end goal of a compiler is to translate high-level code into a language the CPU can understand. *This language is Assembly.*  
+
+ ### Da Registers ✨✨
+ - Have its' own storage in CPUs and are extremely fast.
+ - If the data is too large to fit in a register, a register will hold a pointer to the data so it can be accessed.
+
+GPR: General purpose registers (literally what the name suggests)
+Types:
+RAX - Known as the accumulator register. Often used to store the return value of a function.        
+RBX - Sometimes known as the base register, not to be confused with the base pointer. Sometimes used as a base pointer for memory access.       
+RDX - Sometimes known as the data register.      
+RCX - Sometimes known as the counter register. Used as a loop counter.       
+RSI - Known as the source index. Used as the source pointer in string operations.       
+RDI - Known as the destination index. Used as the destination pointer in string operations.      
+RSP - The stack pointer. Holds the address of the top of the stack.       
+RBP - The base pointer. Holds the address of the base (bottom) of the stack       
