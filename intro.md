@@ -93,3 +93,47 @@ RSI - Known as the source index. Used as the source pointer in string operations
 RDI - Known as the destination index. Used as the destination pointer in string operations.      
 RSP - The stack pointer. Holds the address of the top of the stack.       
 RBP - The base pointer. Holds the address of the base (bottom) of the stack       
+
+
+**NOTE:**         
+An immediate value (or just immediate, sometimes IM) is something like the number 12.     
+An immediate value is not a memory address or register, instead, it's some sort of *constant data*.     
+
+A register is referring to something like RAX, RBX, R12, AL, etc.     
+
+Memory or a memory address refers to a location in memory (a memory address) such as 0x7FFF842B.      
+The structure may be as:
+```
+(Instruction/Opcode/Mnemonic) <Destination Operand>, <Source Operand>
+```
+
+### Status Flags     
+(Here "flag is set" means the flag is set to 1 which is true/on. 0 is false/off.)        
+1. Zero Flag (ZF) - Set if the result of an operation is zero. Not set if the result of an operation is not zero.              
+2. Carry Flag (CF) - Set if the last unsigned arithmetic operation carried (addition) or borrowed (subtraction) a bit beyond the register.
+   It's also set when an operation would be negative if it wasn't for the operation being unsigned.          
+4. Overflow Flag (OF) - Set if a signed arithmetic operation is too big for the register to contain.          
+5. Sign Flag (SF) - Set if the result of an operation is negative.            
+6. Adjust/Auxiliary Flag (AF) - Same as the carry flag but for Binary Coded Decimal (BCD) operations.       
+7. Parity Flag (PF) - Set to 1 if the number of bits set in the last 8 bits is even. (10110100, PF=1; 10110101, PF=0)       
+8. Trap Flag (TF) - Allows for single-stepping of programs.         
+
+## Memory Layout       
+The system's memory is organized in a specific way.     
+
+### Memory Segments      
+There are different segments/sections in which data or code is stored in memory.     
+They are the following:   
+   
+1. Stack - Holds non-static local variables. Discussed more in-depth soon.     
+2. Heap - Contains dynamically allocated data that can be uninitialized at first.        
+3. .data - Contains global and static data initialized to a non-zero value.          
+4. .bss - Contains global and static data that is uninitialized or initialized to zero.
+5. .text - Contains the code of the program
+
+> [!NOTE] **Lil info**
+>There are two ways computers can store data in memory - big-endian and little-endian.     
+>
+> Big Endian - The most significant byte (far left) is stored first. This would be 0xDEADBEEF from the example.              
+> Little Endian - The least significant byte (far right) is stored first. This would be 0xEFBEADDE from the example.
+    
