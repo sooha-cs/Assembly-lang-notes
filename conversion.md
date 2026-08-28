@@ -15,3 +15,16 @@ Example: Convert 13 to binary
 Read remainders bottom to top: 1101 → 13 (decimal) = 1101 (binary)          
 
 Stop dividing when the result reaches 0. Each remainder is the next binary digit from right to left.
+
+
+## Hex digits
+Consist of 0–9 = 0-9, A–F = 10-15.     
+
+Bit-to-hex mapping:       
+```
+8 bits (1 byte) → 2 hex digits          
+16 bits → 4 hex digits           
+64 bits → 16 hex digits              
+```
+Hex prefix used: 0x (e.g. 0xFF, 0x41 for 'A', 0x0a for newline).
+
