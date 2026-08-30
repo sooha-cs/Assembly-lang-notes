@@ -28,3 +28,18 @@ Bit-to-hex mapping:
 ```
 Hex prefix used: 0x (e.g. 0xFF, 0x41 for 'A', 0x0a for newline).
 
+## Hex to Decimal
+
+Hexadecimal (base 16): each position is a power of 16. Digits A-F represent 10-15.       
+
+Hex     	A 	B 	C	 D	 E	 F         
+Decimal	10	11	12	13	14	15            
+Converting hex to decimal: multiply each digit by its place value (16⁰, 16¹, 16², ...) and sum.     
+
+Formula for digits d₂ d₁ d₀:      
+```
+Value = d₂ × 256 + d₁ × 16 + d₀ × 1
+```
+Examples:      
+
+0x2A = 2×16 + 10×1 = 42     
