@@ -43,3 +43,25 @@ Value = d₂ × 256 + d₁ × 16 + d₀ × 1
 Examples:      
 
 0x2A = 2×16 + 10×1 = 42     
+
+## Decimal to Hex
+
+To convert decimal to hexadecimal: divide by 16 repeatedly, read remainders bottom to top.     
+Example: Convert 42 to hex:           
+
+42 ÷ 16 = 2 remainder 10 (A)            
+2 ÷ 16 = 0 remainder 2         
+Read bottom to top: 0x2A       
+
+-----------------
+
+ASCII maps characters to numbers. Key values:
+
+| Character	| Hex |
+|----------|-------|
+| 'A' (uppercase start) |	0x41 |
+| 'a' (lowercase start)	| 0x61 |
+| '0' (digits start) |	0x30 |
+| Space	| 0x20 |
+| Newline \n	| 0x0A |
+| Null \0	| 0x00 |
