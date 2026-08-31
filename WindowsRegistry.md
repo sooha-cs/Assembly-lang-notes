@@ -38,13 +38,15 @@ regedit.exe
  For Windows 7 and above, a user’s profile directory is located in C:\Users\<username>\ where the hives are:          
 
 1. NTUSER.DAT (mounted on HKEY_CURRENT_USER when a user logs in)         
-2. USRCLASS.DAT (mounted on HKEY_CURRENT_USER\Software\CLASSES)        
-The USRCLASS.DAT hive is located in the directory C:\Users\<username>\AppData\Local\Microsoft\Windows.
-**Reminder that both of these are hidden**
-
+2. USRCLASS.DAT (mounted on HKEY_CURRENT_USER\Software\CLASSES)
+The USRCLASS.DAT hive is located in the directory C:\Users\<username>\AppData\Local\Microsoft\Windows.        
+**Reminder that both of these are hidden**      
+ 
 >Registry backups are the opposite of Transaction logs. These are the backups of the registry hives located in the C:\Windows\System32\Config directory. These hives are copied to the C:\Windows\System32\Config\RegBack directory every ten days.
->Apart from these files, there is another very important hive called the **AmCache hive**. This hive is located in C:\Windows\AppCompat\Programs\Amcache.hve. Windows creates this hive to save information on programs that were recently run on the system.
+>       
+>Apart from these files, there is another very important hive called the **AmCache hive**. This hive is located in C:\Windows\AppCompat\Programs\Amcache.hve. Windows creates this hive to save information on programs that were recently run on the system.        
 ---------
+
 ## Finding system information with registry
 1. OS version (register key):
    ```
@@ -62,10 +64,10 @@ The USRCLASS.DAT hive is located in the directory C:\Users\<username>\AppData\Lo
    ```
    SYSTEM\Select\LastKnownGood
    ```
-4.  Time zone the computer is located in:
-   ```
-   SYSTEM\CurrentControlSet\Control\TimeZoneInformation
-   ```
+ 4.  Time zone the computer is located in:
+      ```
+      SYSTEM\CurrentControlSet\Control\TimeZoneInformation
+      ```
 5. Network Interfaces:
    ```
    SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces
