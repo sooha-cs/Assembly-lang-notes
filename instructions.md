@@ -41,3 +41,13 @@ mov rbx,rax
 ; TODO: Copy the value from rbx into rcx
 mov rcx,rbx
 ```
+
+MOV Memory to Register: Use brackets [ ] to load a value from memory into a register:        
+```
+mov al, [number]    ; loads the VALUE stored at address "number" into al   
+```
+Without brackets, you load the address itself, not the value:    
+```
+mov al, number      ; Wrong: loads the ADDRESS, not the value
+```
+Size must match: use al (byte) for byte-sized memory, not rax.     
