@@ -42,7 +42,7 @@ mov rbx,rax
 mov rcx,rbx
 ```
 
-MOV Memory to Register: Use brackets [ ] to load a value from memory into a register:        
+MOV Memory to Register (and vice-versa) : Use brackets [ ] to load a value from memory into a register:        
 ```
 mov al, [number]    ; loads the VALUE stored at address "number" into al   
 ```
@@ -51,3 +51,31 @@ Without brackets, you load the address itself, not the value:
 mov al, number      ; Wrong: loads the ADDRESS, not the value
 ```
 Size must match: use al (byte) for byte-sized memory, not rax.     
+
+Write two lines of assembly to:     
+1. Put the number 9 into the al register     
+2. Store the value from al into the memory address destination
+```
+   ; Data is defined here so the file can be assembled alone
+  section .text
+    ; TODO: Put the number 9 into the al register
+    mov al,9
+    ; TODO: Store the value from al into the memory address "destination"
+    mov [destination],al
+```
+-----------
+### LEA - Load Address     
+LEA (Load Effective Address) loads a memory address into a register *without accessing memory.*      
+```
+lea register, [address]
+```
+MOV vs LEA:      
+|Instruction |	What it does |
+|----------|------------|
+| mov al, [number]	| Loads the value at that address |
+| lea rsi, [number]	| Loads the address itself |
+```
+number db 42
+mov al, [number]    ; al = 42
+lea rsi, [number]   ; rsi = address of number
+```
