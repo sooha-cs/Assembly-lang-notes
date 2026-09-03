@@ -79,3 +79,19 @@ number db 42
 mov al, [number]    ; al = 42
 lea rsi, [number]   ; rsi = address of number
 ```
+
+Write two lines of assembly to:     
+
+Load the value from source into al      
+Store the value from al into destination    
+```
+section .data
+    source db 5
+    destination db 0
+
+section .text
+    ; TODO: Load the value from "source" into al
+    mov al,[source]
+    ; TODO: Store the value from al into "destination"
+    mov [destination],al
+```
