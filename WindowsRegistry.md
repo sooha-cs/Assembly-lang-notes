@@ -84,5 +84,7 @@ The USRCLASS.DAT hive is located in the directory C:\Users\<username>\AppData\Lo
    ```
    SAM\Domains\Account\Users
    ```
+
+## To do: add more about registry keys here 
    
    
