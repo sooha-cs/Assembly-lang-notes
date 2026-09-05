@@ -69,7 +69,7 @@ LEA (Load Effective Address) loads a memory address into a register *without acc
 ```
 lea register, [address]
 ```
-MOV vs LEA:      
+MOV vs LEA:          
 |Instruction |	What it does |
 |----------|------------|
 | mov al, [number]	| Loads the value at that address |
@@ -82,7 +82,7 @@ lea rsi, [number]   ; rsi = address of number
 
 Write two lines of assembly to:     
 
-Load the value from source into al      
+Load the value from source into al        
 Store the value from al into destination    
 ```
 section .data
@@ -95,3 +95,4 @@ section .text
     ; TODO: Store the value from al into "destination"
     mov [destination],al
 ```
+
