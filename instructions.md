@@ -95,4 +95,10 @@ section .text
     ; TODO: Store the value from al into "destination"
     mov [destination],al
 ```
+Practice: Swap Registers     
 
+To swap two registers, use a third temporary register:     
+demo:    
+mov rcx, rax   ; Step 1: Save rax into temp register    
+mov rax, rbx   ; Step 2: Copy rbx into rax    
+mov rbx, rcx   ; Step 3: Copy temp into rbx    
