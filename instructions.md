@@ -95,10 +95,23 @@ section .text
     ; TODO: Store the value from al into "destination"
     mov [destination],al
 ```
-Practice: Swap Registers     
+Tasks:
+ 
+Load the value from num1 into al    
+Load the value from num2 into bl     
+Copy the value from bl into cl     
+Store the value from al into result     
+```
+    num1 db 8
+    num2 db 3
+    result db 0
 
-To swap two registers, use a third temporary register:     
-demo:    
-mov rcx, rax   ; Step 1: Save rax into temp register    
-mov rax, rbx   ; Step 2: Copy rbx into rax    
-mov rbx, rcx   ; Step 3: Copy temp into rbx    
+    ; TODO: Load the value from num1 into al
+    mov al,[num1]
+    ; TODO: Load the value from num2 into bl
+    mov bl,[num2]
+    ; TODO: Copy the value from bl into cl
+    mov cl,bl
+    ; TODO: Store the value from al into result
+    mov [result],al
+```
