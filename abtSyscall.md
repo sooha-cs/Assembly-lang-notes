@@ -21,3 +21,12 @@ mov rax, 60    ; syscall number for exit
 mov rdi, 0     ; exit code (0 = success)     
 syscall        ; ask the OS to exit    
 ```
+Common conventions:    
+
+1: General error      
+2: Missing input file     
+3: Permission denied     
+4: Network error      
+
+> Always set rdi before the exit syscall: forgetting leaves a garbage value in the register, causing a random exit code.     
+
